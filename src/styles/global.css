@@ -1,0 +1,65 @@
+:root {
+  /* Skin palette (Windows Media Player 10/11 "Luna" era) */
+  --frame-outline: #26357d;
+  --frame-light: #e4e9fb;
+  --frame-mid: #b3bfec;
+  --frame-dark: #7f8fd2;
+  --frame-shadow: #5565b4;
+
+  --chrome-btn-light: #ffffff;
+  --chrome-btn-mid: #dfe5f7;
+  --chrome-btn-dark: #a6b2dc;
+  --chrome-btn-border: #5f6fae;
+  --chrome-icon: #2c3a78;
+
+  --accent-green-light: #b8f5b0;
+  --accent-green: #3fbf3a;
+  --accent-green-dark: #1e7b1d;
+
+  --screen-bg: #000;
+  --screen-border: #1b2350;
+
+  /* Retro type: pixel face for chrome/headers, LCD face for the black screen */
+  --font-pixel: 'Pixelify Sans', Tahoma, sans-serif;
+  --font-lcd: 'VT323', 'Lucida Console', monospace;
+
+  --lcd-text: #8ad98a;
+  --lcd-dim: #4f8f55;
+  --lcd-bright: #d6ffd0;
+  --lcd-glow: 0 0 4px rgba(90, 255, 120, 0.45);
+
+  font-family: var(--font-pixel);
+  font-size: 11px;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  /* "Bliss"-ish desktop backdrop */
+  background:
+    radial-gradient(ellipse 140% 60% at 30% 105%, #6fb33d 0%, #4f9a2a 35%, transparent 36%),
+    radial-gradient(ellipse 120% 55% at 85% 110%, #5aa532 0%, #3f8a22 40%, transparent 41%),
+    linear-gradient(#2f6fd8 0%, #5b97e8 45%, #a9cdf5 70%, #5aa532 70.5%);
+  overflow: hidden;
+  user-select: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Inside the Electron frameless window the skin *is* the window */
+:root[data-shell='desktop'] body {
+  background: transparent;
+}
